@@ -719,27 +719,40 @@ table.sched{width:100%;border-collapse:collapse;background:linear-gradient(180de
    MOBILE STICKY
 ════════════════════════════════════════════ */
 .mob-stick{
-  display:none;position:fixed;bottom:0;left:0;right:0;
+  display:flex;position:fixed;bottom:0;left:0;right:0;
   background:#0a0a0a;
   border-top:3px solid var(--red);
   padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-  z-index:9990;gap:8px;box-shadow:0 -4px 24px rgba(0,0,0,.8);
+  z-index:9990;gap:8px;box-shadow:0 -4px 28px rgba(0,0,0,.9);
 }
-@media(max-width:768px){.mob-stick{display:flex}}
+/* Desktop — centered floating pill */
+@media(min-width:769px){
+  .mob-stick{
+    left:50%;transform:translateX(-50%);
+    width:480px;right:auto;
+    bottom:20px;
+    border-radius:12px 12px 0 0;
+    border:1px solid rgba(220,38,38,.3);
+    border-bottom:none;
+    padding:12px 16px 14px;
+  }
+}
 .ms-btn{
   flex:1;padding:13px 6px;font-family:var(--head);font-size:10px;font-weight:700;
   letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--border);
   background:var(--bg2);color:#555;cursor:pointer;text-align:center;
   text-decoration:none;display:flex;align-items:center;justify-content:center;
   gap:5px;transition:.15s;min-height:48px;touch-action:manipulation;
-  -webkit-tap-highlight-color:transparent;
+  -webkit-tap-highlight-color:transparent;border-radius:6px;
 }
+.ms-btn:hover{color:#fff;border-color:rgba(255,255,255,.2)}
 .ms-btn-r{
   background:var(--red);color:#fff!important;border-color:transparent;
   box-shadow:var(--sh-red);
 }
 .ms-btn-r:hover{background:var(--red-dark)}
-@media(max-width:768px){body{padding-bottom:68px}}
+body{padding-bottom:80px}
+@media(min-width:769px){body{padding-bottom:0}}
 
 /* ════════════════════════════════════════════
    CHAT WIDGET
