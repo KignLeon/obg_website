@@ -1,131 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Chimney &amp; Air Duct Experts NJ — Our Work</title>
-  <meta name="description" content="See real before &amp; after results from Chimney & Air Duct Experts NJ. Chimney cleaning, HVAC duct cleaning, and gas system installation across New Jersey.">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='%230c0c0c'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dy='.35em' font-family='Arial Black,sans-serif' font-weight='900' font-size='11' fill='%23f97316'%3ECA%3C/text%3E%3C/svg%3E">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Old School Boxing & Fitness Center — San Diego</title>
+<meta name="description" content="See Old School Boxing & Fitness Center in action. Training photos, classes, boxing rings, youth programs, and more from San Diego's most authentic boxing gym.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --red:#dc2626;--red-dark:#b91c1c;
+  --bg:#0a0a0a;--bg2:#111;
+  --border:rgba(255,255,255,.08);
+  --font:'Open Sans',sans-serif;--head:'Oswald',sans-serif;
+  --sh-red:0 4px 20px rgba(220,38,38,.4);
+  --radius:12px;
+}
+body{background:var(--bg);color:#c8c8c8;font-family:var(--font);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+/* NAV */
+.nav{background:#0a0a0a;border-bottom:3px solid var(--red);position:sticky;top:0;z-index:999;height:66px;box-shadow:0 2px 20px rgba(0,0,0,.8)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--head);font-size:18px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;line-height:1.1}
+.nav-logo span{color:var(--red)}
+.nav-logo small{display:block;font-size:9px;font-weight:400;color:#444;letter-spacing:2.5px;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;list-style:none;align-items:center}
+.nav-links li a{font-family:var(--head);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#888;padding:0 16px;height:66px;display:flex;align-items:center;border-bottom:3px solid transparent;margin-bottom:-3px;transition:.15s}
+.nav-links li a:hover,.nav-links li a.active{color:#fff;border-bottom-color:var(--red)}
+.nav-cta{background:var(--red)!important;color:#fff!important;font-family:var(--head)!important;font-size:12px!important;font-weight:700!important;letter-spacing:2px!important;text-transform:uppercase!important;padding:0 26px!important;height:66px!important;display:flex!important;align-items:center!important;border:none!important;cursor:pointer;border-bottom:none!important;margin-bottom:0!important;transition:.15s!important}
+.nav-cta:hover{background:var(--red-dark)!important}
+.nav-ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-ham span{width:22px;height:2px;background:#666;display:block}
+@media(max-width:768px){
+  .nav-ham{display:flex}
+  .nav-links{display:none;position:fixed;inset:0;background:#0a0a0a;flex-direction:column;justify-content:center;align-items:center;z-index:9999}
+  .nav-links.open{display:flex}
+  .nav-links li a{font-size:22px;height:auto;padding:18px 24px;border-bottom:none;margin-bottom:0}
+  .nav-cta{height:auto!important;padding:16px 40px!important;font-size:14px!important;margin-top:18px}
+}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,#0a0a0a 0%,#111 50%,#0a0a0a 100%);padding:80px 24px 100px;text-align:center;position:relative;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 85%,0 100%)}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 0%,rgba(220,38,38,.08) 0%,transparent 70%)}
+.ph-tag{font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px}
+.ph-tag::before,.ph-tag::after{content:'';display:inline-block;width:28px;height:2px;background:var(--red)}
+.page-hero h1{font-family:var(--head);font-size:clamp(40px,7vw,80px);font-weight:700;color:#fff;text-transform:uppercase;line-height:.9;margin-bottom:18px}
+.page-hero h1 span{color:var(--red)}
+.page-hero p{font-size:16px;color:#888;max-width:520px;margin:0 auto;line-height:1.7}
+.breadcrumb{font-size:11px;color:#444;letter-spacing:.5px;margin-bottom:18px;text-transform:uppercase}
+.breadcrumb a{color:#555}.breadcrumb a:hover{color:var(--red)}
+
+/* SHARED */
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+@media(max-width:768px){.section{padding:56px 0}}
+.sec-tag{font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.sec-tag::before{content:'';display:inline-block;width:28px;height:2px;background:var(--red)}
+.sec-h2{font-family:var(--head);font-size:clamp(28px,5vw,48px);font-weight:700;color:#fff;text-transform:uppercase;line-height:1;margin-bottom:16px}
+.sec-h2 span{color:var(--red)}
+.btn{font-family:var(--head);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:16px 36px;border:none;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;gap:8px;text-decoration:none;min-height:52px;border-radius:4px}
+.btn-red{background:var(--red);color:#fff;box-shadow:var(--sh-red)}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.2)}
+.btn-outline:hover{border-color:#fff}
+
+/* GALLERY GRID */
+.gallery-bg{background:#0a0a0a}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.gallery-grid{grid-template-columns:1fr}}
+.g-item{position:relative;overflow:hidden;border-radius:var(--radius);background:#111;cursor:pointer;group:hover}
+.g-item.tall{grid-row:span 2}
+.g-item.wide{grid-column:span 2}
+@media(max-width:900px){.g-item.wide{grid-column:span 1}.g-item.tall{grid-row:span 1}}
+.g-img{width:100%;height:280px;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease,filter .4s ease;filter:brightness(.8)}
+.g-item.tall .g-img{height:100%}
+@media(max-width:900px){.g-item.tall .g-img{height:280px}}
+.g-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.85) 100%);opacity:0;transition:.3s}
+.g-item:hover .g-overlay{opacity:1}
+.g-item:hover .g-img{transform:scale(1.06);filter:brightness(.6)}
+.g-label{position:absolute;bottom:0;left:0;right:0;padding:20px 18px;font-family:var(--head);font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;transform:translateY(10px);opacity:0;transition:.3s}
+.g-item:hover .g-label{transform:none;opacity:1}
+.g-tag{position:absolute;top:14px;left:14px;background:var(--red);color:#fff;font-family:var(--head);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:4px}
+
+/* MASONRY FEATURE */
+.feature-row{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-top:52px}
+@media(max-width:768px){.feature-row{grid-template-columns:1fr}}
+.feat-photo{position:relative;border-radius:var(--radius);overflow:hidden}
+.feat-photo img{width:100%;height:480px;object-fit:cover;object-position:top;display:block;filter:brightness(.8);transition:.4s}
+.feat-photo:hover img{filter:brightness(.6);transform:scale(1.03)}
+@media(max-width:768px){.feat-photo img{height:280px}}
+.feat-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,transparent 100%);padding:24px 20px;font-family:var(--head);color:#fff}
+.feat-caption strong{display:block;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.feat-caption span{font-size:12px;color:#aaa}
+.side-photos{display:flex;flex-direction:column;gap:16px}
+.side-photo{position:relative;border-radius:var(--radius);overflow:hidden;flex:1}
+.side-photo img{width:100%;height:100%;min-height:200px;object-fit:cover;object-position:center;display:block;filter:brightness(.8);transition:.4s}
+.side-photo:hover img{filter:brightness(.6);transform:scale(1.04)}
+
+/* CTA STRIP */
+.cta-strip{background:var(--red);padding:60px 0;text-align:center}
+.cta-strip h2{font-family:var(--head);font-size:clamp(28px,5vw,52px);font-weight:700;color:#fff;text-transform:uppercase;margin-bottom:12px}
+.cta-strip p{font-size:16px;color:rgba(255,255,255,.75);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto}
+.btn-wh{background:#fff;color:var(--red);font-family:var(--head);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:16px 36px;border:none;cursor:pointer;border-radius:4px;transition:.15s;min-height:52px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn-wh:hover{background:#f0f0f0;transform:translateY(-2px)}
+.btn-wh-out{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);font-family:var(--head);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:16px 36px;cursor:pointer;border-radius:4px;transition:.15s;min-height:52px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.btn-wh-out:hover{border-color:#fff}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* INSTAGRAM STRIP */
+.insta-bg{background:#111;border-top:1px solid var(--border);padding:60px 0;text-align:center}
+.insta-handle{font-family:var(--head);font-size:clamp(24px,4vw,42px);font-weight:700;color:#fff;text-transform:uppercase;margin-bottom:8px}
+.insta-handle span{color:var(--red)}
+
+/* FOOTER */
+.footer{background:#050505;border-top:1px solid var(--border);padding:20px 0;text-align:center;font-size:11px;color:#333;letter-spacing:.3px}
+.footer a{color:#444;transition:.15s}
+.footer a:hover{color:var(--red)}
+
+/* MOBILE STICKY */
+.mob-stick{display:none;position:fixed;bottom:0;left:0;right:0;background:#0a0a0a;border-top:3px solid var(--red);padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:9990;gap:8px}
+@media(max-width:768px){.mob-stick{display:flex};body{padding-bottom:68px}}
+.ms-btn{flex:1;padding:13px 6px;font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--border);background:#111;color:#555;cursor:pointer;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:5px;transition:.15s;min-height:48px;border-radius:4px}
+.ms-btn-r{background:var(--red);color:#fff!important;border-color:transparent}
+
+/* ANIM */
+.anim{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.anim.visible{opacity:1;transform:none}
+</style>
 </head>
 <body>
 
-<div class="aurora-orbs" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">OLD SCHOOL<span> BOXING</span><small>& Fitness Center · San Diego</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/services/">Programs</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/gallery/" class="active">Gallery</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/contact/" class="nav-cta"><i class="fas fa-bolt"></i> Free Session</a></li>
+    </ul>
+    <button class="nav-ham" id="navHam"><span></span><span></span><span></span></button>
+  </div>
+</nav>
 
-<div class="top-bar"><div class="container"><div class="top-bar-inner">
-  <div class="top-bar-left"><a href="tel:2019208991"><i class="fas fa-phone"></i> (201) 920-8991</a><span><i class="fas fa-map-marker-alt"></i> New Jersey</span></div>
-  <div class="top-bar-right"><span><i class="fas fa-clock"></i> Mon–Sat 8am–7pm</span><a href="https://instagram.com/chimney.hvac.experts.nj" target="_blank"><i class="fab fa-instagram"></i> @chimney.hvac.experts.nj</a></div>
-</div></div></div>
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> <i class="fas fa-chevron-right" style="font-size:9px;color:#333"></i> Gallery</div>
+    <div class="ph-tag">Inside the Gym</div>
+    <h1>See Where <span>Champions</span><br>Are Made</h1>
+    <p>Real training. Real people. Real results. Take a look inside Old School Boxing & Fitness — San Diego's most authentic boxing gym.</p>
+  </div>
+</div>
 
-<nav class="navbar" id="navbar"><div class="container"><div class="nav-inner">
-  <a href="/" class="nav-logo"><img src="../ff-logo.webp" alt="Chimney &amp; Air Duct Experts NJ"></a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="/">Home</a></li><li><a href="/services/">Services</a></li><li><a href="/gallery/" class="active">Gallery</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li>
-    <li><a href="tel:2019208991" class="nav-cta"><i class="fas fa-phone"></i> Free Estimate</a></li>
-  </ul>
-  <button class="mobile-toggle" id="mobile-toggle"><span></span><span></span><span></span></button>
-</div></div></nav>
-
-<div class="page-hero"><div class="container">
-  <div class="breadcrumb"><a href="/">Home</a> <i class="fas fa-chevron-right" style="font-size:10px"></i> Gallery</div>
-  <div class="section-tag" style="margin-bottom:14px"><i class="fas fa-images"></i> Our Work</div>
-  <h1>Before &amp; <span class="text-gradient">After</span></h1>
-  <p>Real results from real NJ homes. See the difference professional cleaning and service makes.</p>
-</div></div>
-
-<!-- BEFORE AFTER SLIDER -->
-<section class="section section-dark">
-  <div class="container">
-    <div class="section-header center anim-fade-up">
-      <div class="section-tag"><i class="fas fa-left-right"></i> Drag to Compare</div>
-      <h2>Duct Cleaning: <span class="text-gradient">The Difference</span></h2>
-      <p>One of our recent air duct cleaning jobs in Bergen County, NJ. Drag the slider to see the transformation.</p>
+<!-- FEATURED PHOTOS -->
+<section class="section gallery-bg">
+  <div class="wrap">
+    <div class="anim">
+      <div class="sec-tag">The Gym</div>
+      <h2 class="sec-h2">Training Like <span>It's Real</span></h2>
     </div>
-    <div class="ba-slider-wrap anim-fade-up">
-      <div class="ba-slider" id="ba-slider">
-        <div class="ba-image ba-after"><img src="../assets/hvac-cleaning.jpg" alt="After — clean air ducts NJ"><span class="ba-label ba-label-after">After</span></div>
-        <div class="ba-image ba-before"><img src="../assets/duct-before-after.jpg" alt="Before — clogged dirty air ducts NJ"><span class="ba-label ba-label-before">Before</span></div>
-        <div class="ba-handle" id="ba-handle"><div class="ba-handle-line"></div><div class="ba-handle-circle"><i class="fas fa-arrows-left-right"></i></div><div class="ba-handle-line"></div></div>
+    <div class="feature-row anim">
+      <div class="feat-photo">
+        <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/f_webp,q_auto,w_900/v1759370297/san-diego-boxing-gym-coach-headcoach-ernest-johnson_jpnbvg"
+             alt="Coach Ernest Johnson teaching boxing at Old School Boxing San Diego">
+        <div class="feat-caption">
+          <strong>Coach Ernest Johnson — Head Coach & Founder</strong>
+          <span>50+ years of boxing experience</span>
+        </div>
+      </div>
+      <div class="side-photos">
+        <div class="side-photo">
+          <img src="/obi-fullclass.jpg" alt="Old School Boxing full class San Diego">
+          <div class="feat-caption"><strong>Full Class — Adult Boxing</strong><span>All levels welcome</span></div>
+        </div>
+        <div class="side-photo">
+          <img src="/obi-coachmits.jpg" alt="Boxing mitt training at Old School Boxing">
+          <div class="feat-caption"><strong>Mitt Work — Personal Training</strong><span>One-on-one technique sessions</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- GALLERY GRID -->
-<section class="section">
-  <div class="container">
-    <div class="section-header center anim-fade-up">
-      <div class="section-tag"><i class="fas fa-images"></i> Portfolio</div>
-      <h2>Our Work <span class="text-gradient">Across NJ</span></h2>
-    </div>
+<section class="section" style="background:#111;padding-top:0">
+  <div class="wrap">
     <div class="gallery-grid">
-      <div class="gallery-item anim-fade-up"><img src="../assets/hero-bg.jpg" alt="Chimney cleaning New Jersey"><div class="gallery-item-label">Chimney Sweep — Bergen Co.</div></div>
-      <div class="gallery-item anim-fade-up"><img src="../assets/chimney-cleaning.jpg" alt="Professional chimney service NJ"><div class="gallery-item-label">Chimney Cleaning — Essex Co.</div></div>
-      <div class="gallery-item anim-fade-up"><img src="../assets/hvac-cleaning.jpg" alt="HVAC duct cleaning NJ"><div class="gallery-item-label">Air Duct Cleaning — Hudson Co.</div></div>
-      <div class="gallery-item anim-fade-up"><img src="../assets/gas-installation.jpg" alt="Gas systems installation NJ"><div class="gallery-item-label">Gas Installation — Morris Co.</div></div>
-      <div class="gallery-item anim-fade-up"><img src="../assets/chimney-inspection.jpg" alt="Chimney inspection NJ"><div class="gallery-item-label">Chimney Inspection — Union Co.</div></div>
-      <div class="gallery-item anim-fade-up"><img src="../assets/duct-before-after.jpg" alt="Air duct before after NJ"><div class="gallery-item-label">Duct Before &amp; After</div></div>
-      <div class="gallery-item anim-fade-up"><img src="../assets/chimney-cleaning.jpg" alt="Dryer vent cleaning NJ"><div class="gallery-item-label">Dryer Vent Cleaning — Passaic</div></div>
-      <div class="gallery-item anim-fade-up"><img src="../assets/hvac-cleaning.jpg" alt="HVAC maintenance NJ"><div class="gallery-item-label">HVAC Maintenance — Middlesex</div></div>
-      <div class="gallery-item anim-fade-up"><img src="../assets/hero-bg.jpg" alt="Full chimney service NJ"><div class="gallery-item-label">Full Service — Somerset Co.</div></div>
-    </div>
 
-    <div style="text-align:center;margin:48px auto 0;padding:24px;background:rgba(249,115,22,.07);border:1px solid rgba(249,115,22,.2);border-left:3px solid var(--orange);border-radius:14px;max-width:600px" class="anim-fade-up">
-      <div style="font-family:var(--font-display);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--orange-bright);margin-bottom:8px">📸 Follow Our Work</div>
-      <p style="color:var(--text-muted);font-size:14px;margin-bottom:16px">See more real jobs on Instagram — before &amp; afters, tips, and more.</p>
-      <a href="https://instagram.com/chimney.hvac.experts.nj" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-instagram"></i> @chimney.hvac.experts.nj</a>
+      <div class="g-item anim">
+        <img class="g-img" src="/obi-in-ring.jpg" alt="Boxing ring at Old School Boxing Fitness San Diego">
+        <div class="g-tag">The Ring</div>
+        <div class="g-overlay"></div>
+        <div class="g-label">Competition Ring — San Diego</div>
+      </div>
+
+      <div class="g-item anim">
+        <img class="g-img" src="/obi-ring.jpg" alt="Boxing training ring Old School Boxing">
+        <div class="g-tag">Training</div>
+        <div class="g-overlay"></div>
+        <div class="g-label">Ring Work & Sparring</div>
+      </div>
+
+      <div class="g-item anim">
+        <img class="g-img" src="/obi-building.jpg" alt="Old School Boxing Fitness Center exterior San Diego">
+        <div class="g-tag">Our Gym</div>
+        <div class="g-overlay"></div>
+        <div class="g-label">5987 El Cajon Blvd — San Diego</div>
+      </div>
+
+      <div class="g-item anim">
+        <img class="g-img" src="https://res.cloudinary.com/ddnhp0hzd/image/upload/f_webp,q_auto,w_700/v1759370297/san-diego-boxing-gym-coach-headcoach-ernest-johnson_jpnbvg"
+             alt="Head coach Ernest boxing gym San Diego">
+        <div class="g-tag">Coach Ernest</div>
+        <div class="g-overlay"></div>
+        <div class="g-label">Head Coach — 50+ Years Experience</div>
+      </div>
+
+      <div class="g-item anim">
+        <img class="g-img" src="/obi-fullclass.jpg" alt="Group boxing class Old School Boxing San Diego">
+        <div class="g-tag">Classes</div>
+        <div class="g-overlay"></div>
+        <div class="g-label">Adult Group Boxing Class</div>
+      </div>
+
+      <div class="g-item anim">
+        <img class="g-img" src="/obi-coachmits.jpg" alt="Coach mitts boxing San Diego">
+        <div class="g-tag">Personal Training</div>
+        <div class="g-overlay"></div>
+        <div class="g-label">Mitt Work — 1-on-1 Sessions</div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="cta-banner">
-  <div class="container" style="text-align:center">
-    <h2 class="anim-fade-up">Want Results <span class="text-gradient">Like These?</span></h2>
-    <p class="anim-fade-up" style="margin-bottom:28px">Free estimates on all chimney, HVAC, and gas services across New Jersey.</p>
-    <div class="anim-fade-up" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="tel:2019208991" class="btn btn-glow btn-lg"><i class="fas fa-phone"></i> (201) 920-8991</a>
-      <a href="/contact/" class="btn btn-chrome btn-lg"><i class="fas fa-calendar"></i> Schedule Online</a>
+<!-- INSTAGRAM STRIP -->
+<section class="insta-bg">
+  <div class="wrap anim">
+    <div class="insta-handle">Follow <span>@OldSchoolBoxingSD</span></div>
+    <p style="font-size:14px;color:#555;margin-bottom:28px;line-height:1.7">Follow us on Instagram for training clips, class updates, fight night coverage, and more from inside the gym.</p>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="btn btn-outline" style="border-radius:4px">
+      <i class="fab fa-instagram"></i> Follow on Instagram
+    </a>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="wrap anim">
+    <h2>Come Train With Us</h2>
+    <p>Your first class is free. Come in, meet Coach Ernest, and see the gym for yourself.</p>
+    <div class="cta-btns">
+      <a href="/contact/" class="btn-wh"><i class="fas fa-bolt"></i> Claim Free Session</a>
+      <a href="tel:6192048974" class="btn-wh-out"><i class="fas fa-phone"></i> (619) 204-8974</a>
     </div>
   </div>
 </section>
 
-<footer class="footer"><div class="pit-stripe"></div><div class="container">
-  <div class="footer-grid">
-    <div class="footer-brand"><img src="../ff-logo.webp" alt="Chimney &amp; Air Duct Experts NJ" class="footer-logo"><p>NJ's trusted chimney, HVAC, and gas systems experts.</p></div>
-    <div class="footer-links"><h4>Services</h4><a href="/services/">Chimney Cleaning</a><a href="/services/">HVAC Cleaning</a><a href="/services/">Gas Installation</a><a href="/services/">Dryer Vent Cleaning</a></div>
-    <div class="footer-links"><h4>Company</h4><a href="/">Home</a><a href="/about/">About</a><a href="/gallery/">Gallery</a><a href="/contact/">Contact</a></div>
-    <div class="footer-links"><h4>Contact</h4><a href="tel:2019208991"><i class="fas fa-phone" style="width:16px;color:var(--orange-bright)"></i> (201) 920-8991</a><a href="https://instagram.com/chimney.hvac.experts.nj" target="_blank"><i class="fab fa-instagram" style="width:16px;color:var(--orange-bright)"></i> Instagram</a><span><i class="fas fa-map-marker-alt" style="width:16px;color:var(--orange-bright)"></i> New Jersey</span></div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    &copy; 2025 Old School Boxing &amp; Fitness Center. All rights reserved. &nbsp;&middot;&nbsp;
+    Designed by <a href="https://lovoson.com" target="_blank" rel="noopener">Lovoson Media</a>
   </div>
-  <div class="footer-bottom"><p>&copy; 2025 Chimney &amp; Air Duct Experts NJ. All rights reserved.</p></div>
-</div></footer>
+</footer>
 
-<div class="mobile-sticky-bar" id="mobile-sticky">
-  <a href="tel:2019208991" class="sticky-btn sticky-btn-primary"><i class="fas fa-phone"></i> Call Now</a>
-  <a href="/contact/" class="sticky-btn"><i class="fas fa-calendar"></i> Schedule</a>
-  <button class="sticky-btn sticky-btn-review" id="sticky-review-btn"><i class="fas fa-star"></i> Review</button>
+<!-- MOBILE STICKY -->
+<div class="mob-stick">
+  <a href="tel:6192048974" class="ms-btn ms-btn-r"><i class="fas fa-phone"></i> Call Now</a>
+  <a href="/contact/" class="ms-btn"><i class="fas fa-bolt"></i> Free Session</a>
 </div>
 
-<div class="wa-chat-widget" id="wa-chat-widget">
-  <div class="wa-notif-bubble" id="wa-notif-bubble"><span id="wa-notif-text">Get results like these! 🔥</span><div class="wa-notif-arrow"></div></div>
-  <button class="wa-fab" id="wa-fab"><div class="wa-pulse"></div><i class="fas fa-comment-dots"></i></button>
-  <div class="wa-chat-window" id="wa-chat-window">
-    <div class="wa-chat-header"><div class="wa-header-info"><div class="wa-avatar"><img src="../ff-logo.webp" alt=""><div class="wa-online"></div></div><div><strong>Chimney &amp; Air Duct Experts</strong><span class="wa-status">Online · Replies fast</span></div></div><button class="wa-close" id="wa-close">×</button></div>
-    <div class="wa-chat-body" id="wa-chat-body"><div class="wa-msg wa-msg-bot"><p>Hi! 👋 Want results like the ones in our gallery? We'd love to help!</p><span class="wa-time">Now</span></div><div id="wa-quick-replies" class="wa-quick-replies"><button class="wa-quick" data-msg="Chimney cleaning price?">Chimney price?</button><button class="wa-quick" data-msg="Air duct cleaning service">Duct cleaning?</button><button class="wa-quick" data-msg="Service areas?">My area?</button></div></div>
-    <div class="wa-chat-input"><input type="text" id="wa-input" placeholder="Type a message..."><button class="wa-send" id="wa-send"><i class="fas fa-paper-plane"></i></button></div>
-    <div class="wa-footer"><a href="tel:2019208991" class="wa-redirect"><i class="fas fa-phone"></i> Call (201) 920-8991</a></div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="review-modal" role="dialog" aria-modal="true">
-  <div class="modal"><button class="modal-close" id="review-modal-close">×</button><div class="review-modal-inner">
-    <div id="review-step-1" class="review-step"><div class="review-modal-icon">🔥</div><h2>Rate Your Experience</h2><div class="star-rating" id="star-rating"><button class="star" data-value="1">★</button><button class="star" data-value="2">★</button><button class="star" data-value="3">★</button><button class="star" data-value="4">★</button><button class="star" data-value="5">★</button></div></div>
-    <div id="review-step-feedback" class="review-step hidden"><div class="review-modal-icon">🙏</div><h2>We're Sorry!</h2><form id="private-feedback-form"><div class="form-group"><textarea name="feedback" rows="4" placeholder="Tell us..."></textarea></div><button type="submit" class="btn btn-glow btn-full">Send</button></form><button class="btn btn-outline btn-full" id="review-skip-btn" style="margin-top:10px">Skip</button></div>
-    <div id="review-step-google" class="review-step hidden"><div class="review-modal-icon">⭐</div><h2>Share on Google!</h2><a href="https://g.page/r/review" target="_blank" class="btn btn-glow btn-full" style="margin-top:12px"><i class="fab fa-google"></i> Leave Review</a></div>
-    <div id="review-step-done" class="review-step hidden"><div class="review-modal-icon">✅</div><h2>Thank You!</h2><button class="btn btn-glow btn-full" id="review-done-close" style="margin-top:12px">Done</button></div>
-  </div></div>
-</div>
-
-<script src="../js/main.js" defer></script>
+<script>
+document.getElementById('navHam').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.1});
+document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+</script>
 </body>
 </html>
