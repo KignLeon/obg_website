@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Old School Boxing & Fitness Center — San Diego</title>
+<meta name="description" content="Meet Coach Ernest Johnson and the Old School Boxing & Fitness Center team in San Diego. 50+ years of boxing experience. Discipline, grit, and community built into every class.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --red:#dc2626;--red-dark:#b91c1c;--red-light:#ef4444;
+  --bg:#0a0a0a;--bg2:#111;--bg3:#161616;
+  --border:rgba(255,255,255,.08);
+  --white:#fff;--text:#c8c8c8;--muted:#666;
+  --font:'Open Sans',sans-serif;--head:'Oswald',sans-serif;
+  --sh-red:0 4px 20px rgba(220,38,38,.4);
+  --radius:16px;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+/* ── NAV ── */
+.nav{background:#0a0a0a;border-bottom:3px solid var(--red);position:sticky;top:0;z-index:999;height:66px;box-shadow:0 2px 20px rgba(0,0,0,.8)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--head);font-size:18px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;line-height:1.1}
+.nav-logo span{color:var(--red)}
+.nav-logo small{display:block;font-size:9px;font-weight:400;color:#444;letter-spacing:2.5px;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;list-style:none;align-items:center}
+.nav-links li a{font-family:var(--head);font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#888;padding:0 16px;height:66px;display:flex;align-items:center;border-bottom:3px solid transparent;margin-bottom:-3px;transition:.15s}
+.nav-links li a:hover,.nav-links li a.active{color:#fff;border-bottom-color:var(--red)}
+.nav-cta{background:var(--red)!important;color:#fff!important;font-family:var(--head)!important;font-size:12px!important;font-weight:700!important;letter-spacing:2px!important;text-transform:uppercase!important;padding:0 26px!important;height:66px!important;display:flex!important;align-items:center!important;border:none!important;cursor:pointer;border-bottom:none!important;margin-bottom:0!important;transition:.15s!important}
+.nav-cta:hover{background:var(--red-dark)!important}
+.nav-ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-ham span{width:22px;height:2px;background:#666;display:block;transition:.2s}
+@media(max-width:768px){
+  .nav-ham{display:flex}
+  .nav-links{display:none;position:fixed;inset:0;background:#0a0a0a;flex-direction:column;justify-content:center;align-items:center;z-index:9999}
+  .nav-links.open{display:flex}
+  .nav-links li a{font-size:22px;height:auto;padding:18px 24px;border-bottom:none;margin-bottom:0}
+  .nav-cta{height:auto!important;padding:16px 40px!important;font-size:14px!important;margin-top:18px}
+}
+
+/* ── PAGE HERO ── */
+.page-hero{
+  background:linear-gradient(135deg,#0a0a0a 0%,#111 50%,#0a0a0a 100%);
+  padding:80px 24px 100px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
+}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 0%,rgba(220,38,38,.08) 0%,transparent 70%)}
+.ph-tag{font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:10px}
+.ph-tag::before,.ph-tag::after{content:'';display:inline-block;width:28px;height:2px;background:var(--red)}
+.page-hero h1{font-family:var(--head);font-size:clamp(40px,7vw,80px);font-weight:700;color:#fff;text-transform:uppercase;line-height:.9;margin-bottom:18px}
+.page-hero h1 span{color:var(--red)}
+.page-hero p{font-size:16px;color:#888;max-width:480px;margin:0 auto;line-height:1.7}
+.breadcrumb{font-size:11px;color:#444;letter-spacing:.5px;margin-bottom:18px;text-transform:uppercase}
+.breadcrumb a{color:#555}
+.breadcrumb a:hover{color:var(--red)}
+
+/* ── SHARED ── */
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+@media(max-width:480px){.wrap{padding:0 20px}}
+.section{padding:90px 0;position:relative}
+@media(max-width:768px){.section{padding:60px 0}}
+.sec-tag{font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.sec-tag::before{content:'';display:inline-block;width:28px;height:2px;background:var(--red)}
+.sec-h2{font-family:var(--head);font-size:clamp(28px,5vw,48px);font-weight:700;color:#fff;text-transform:uppercase;line-height:1;margin-bottom:16px}
+.sec-h2 span{color:var(--red)}
+.btn{font-family:var(--head);font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:16px 36px;border:none;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;min-height:52px;border-radius:4px}
+.btn-red{background:var(--red);color:#fff;box-shadow:var(--sh-red)}
+.btn-red:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 6px 28px rgba(220,38,38,.55)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.25)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+
+/* ── STORY SECTION ── */
+.story-bg{background:#111}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+@media(max-width:900px){.story-grid{grid-template-columns:1fr;gap:40px}}
+.story-img{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.7)}
+.story-img img{width:100%;height:540px;object-fit:cover;object-position:top;display:block;filter:brightness(.85)}
+.story-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.6) 100%)}
+.story-badge{position:absolute;bottom:24px;left:24px;background:var(--red);color:#fff;font-family:var(--head);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:10px 18px;border-radius:4px;z-index:2}
+.story-text p{color:#888;line-height:1.85;margin-bottom:16px;font-size:15px}
+.value-chips{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
+.v-chip{background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.2);color:var(--red);font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:50px}
+
+/* ── COACH FEATURE ── */
+.coach-bg{
+  background:#0a0a0a;
+  position:relative;
+  overflow:hidden;
+}
+.coach-bg::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red)}
+.coach-grid{display:grid;grid-template-columns:400px 1fr;gap:0;min-height:560px}
+@media(max-width:900px){.coach-grid{grid-template-columns:1fr}}
+.coach-photo{position:relative;overflow:hidden}
+.coach-photo img{width:100%;height:100%;min-height:500px;object-fit:cover;object-position:top;display:block;filter:brightness(.8)}
+.coach-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,#0a0a0a 100%)}
+@media(max-width:900px){.coach-photo::after{background:linear-gradient(180deg,transparent 60%,#0a0a0a 100%)}}
+.coach-content{display:flex;flex-direction:column;justify-content:center;padding:64px 56px;border-left:3px solid var(--red)}
+@media(max-width:900px){.coach-content{padding:40px 24px;border-left:none;border-top:3px solid var(--red)}}
+.coach-role{font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.coach-name{font-family:var(--head);font-size:clamp(36px,5vw,64px);font-weight:700;color:#fff;text-transform:uppercase;line-height:.9;margin-bottom:24px}
+.coach-bio{font-size:15px;color:#888;line-height:1.85;margin-bottom:28px}
+.coach-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--border)}
+.cs-num{font-family:var(--head);font-size:40px;font-weight:700;color:#fff;line-height:1}
+.cs-num span{color:var(--red)}
+.cs-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#444;margin-top:4px}
+
+/* ── DIAGONAL SECTION ── */
+.diag-top{clip-path:polygon(0 5%,100% 0,100% 100%,0 100%);margin-top:-40px;padding-top:80px}
+.diag-bottom{clip-path:polygon(0 0,100% 0,100% 95%,0 100%);padding-bottom:80px}
+
+/* ── VALUES ── */
+.vals-bg{background:#111;padding-bottom:0}
+.vals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border-radius:var(--radius);overflow:hidden;margin-top:56px}
+@media(max-width:900px){.vals-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.vals-grid{grid-template-columns:1fr}}
+.val-card{background:#111;padding:44px 32px;text-align:center;transition:.2s;position:relative}
+.val-card::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:3px;background:var(--red);transition:.3s}
+.val-card:hover::after{width:60%}
+.val-card:hover{background:#161616}
+.val-icon{width:72px;height:72px;background:var(--bg);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;transition:.2s}
+.val-card:hover .val-icon{border-color:var(--red)}
+.val-icon i{color:var(--red);font-size:28px}
+.val-title{font-family:var(--head);font-size:17px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.val-body{font-size:13px;color:#666;line-height:1.7}
+
+/* ── GYM STATS ── */
+.stats-bg{background:var(--red);padding:60px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:28px}}
+.stat-num{font-family:var(--head);font-size:clamp(42px,6vw,72px);font-weight:700;color:#fff;line-height:1}
+.stat-label{font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:6px}
+
+/* ── JOIN CTA ── */
+.join-cta{background:#0a0a0a;padding:90px 0;text-align:center;position:relative;overflow:hidden}
+.join-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(220,38,38,.06) 0%,transparent 70%)}
+.join-cta h2{font-family:var(--head);font-size:clamp(32px,5vw,60px);font-weight:700;color:#fff;text-transform:uppercase;margin-bottom:14px;line-height:1}
+.join-cta h2 span{color:var(--red)}
+.join-cta p{font-size:16px;color:#666;margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
+.join-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+.footer{background:#050505;border-top:1px solid var(--border);padding:40px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:32px}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:28px}}
+@media(max-width:500px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand p{font-size:13px;color:#444;line-height:1.7;margin-top:12px}
+.footer-logo{font-family:var(--head);font-size:20px;font-weight:700;color:#fff;text-transform:uppercase}
+.footer-logo span{color:var(--red)}
+.footer-col h4{font-family:var(--head);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#333;margin-bottom:14px}
+.footer-col a,.footer-col span{display:block;font-size:13px;color:#444;margin-bottom:8px;transition:.15s}
+.footer-col a:hover{color:var(--red)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:18px;text-align:center;font-size:11px;color:#2a2a2a;letter-spacing:.3px}
+
+/* ── MOBILE STICKY ── */
+.mob-stick{display:none;position:fixed;bottom:0;left:0;right:0;background:#0a0a0a;border-top:3px solid var(--red);padding:10px 12px calc(10px + env(safe-area-inset-bottom));z-index:9990;gap:8px;box-shadow:0 -4px 24px rgba(0,0,0,.8)}
+@media(max-width:768px){.mob-stick{display:flex};body{padding-bottom:68px}}
+.ms-btn{flex:1;padding:13px 6px;font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border:1px solid var(--border);background:var(--bg2);color:#555;cursor:pointer;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:5px;transition:.15s;min-height:48px;border-radius:4px}
+.ms-btn-r{background:var(--red);color:#fff!important;border-color:transparent;box-shadow:var(--sh-red)}
+
+/* ── ANIMATIONS ── */
+@keyframes fdD{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.anim{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.anim.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">OLD SCHOOL<span> BOXING</span><small>& Fitness Center · San Diego</small></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/services/">Programs</a></li>
+      <li><a href="/about/" class="active">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/contact/" class="nav-cta"><i class="fas fa-bolt"></i> Free Session</a></li>
+    </ul>
+    <button class="nav-ham" id="navHam"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> <i class="fas fa-chevron-right" style="font-size:9px;color:#333"></i> About</div>
+    <div class="ph-tag">Our Story</div>
+    <h1>Built on <span>Discipline</span><br>Forged in the Ring</h1>
+    <p>Old School Boxing & Fitness has been San Diego's most authentic boxing gym for over 50 years — built on grit, respect, and results.</p>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="section story-bg">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-img anim">
+        <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/f_webp,q_auto,w_800/v1759370297/san-diego-boxing-gym-coach-headcoach-ernest-johnson_jpnbvg"
+             alt="Coach Ernest Johnson — Head Coach, Old School Boxing San Diego">
+        <div class="story-badge"><i class="fas fa-fist-raised"></i> &nbsp;50+ Years Boxing</div>
+      </div>
+      <div class="story-text anim">
+        <div class="sec-tag">Our Origin</div>
+        <h2 class="sec-h2">San Diego's <span>Old School</span> Boxing Gym</h2>
+        <p>Old School Boxing & Fitness Center was built on a belief that boxing is more than a sport — it's a discipline that sharpens the mind, forges the body, and builds character that lasts a lifetime.</p>
+        <p>Founded and led by Head Coach Ernest Johnson, our gym has trained everyone from first-timers to competitive fighters. We don't believe in shortcuts. We believe in hard work, proper technique, and showing up every single day.</p>
+        <p>Located in the heart of San Diego at 5987 El Cajon Blvd, we welcome students of all ages and skill levels — from kids learning their first jab to adults looking to get in the best shape of their lives.</p>
+        <div class="value-chips">
+          <span class="v-chip">Discipline</span>
+          <span class="v-chip">Grit</span>
+          <span class="v-chip">Focus</span>
+          <span class="v-chip">Community</span>
+          <span class="v-chip">Excellence</span>
+        </div>
+        <a href="/contact/" class="btn btn-red"><i class="fas fa-bolt"></i> Claim Your Free Session</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACH FEATURE -->
+<section class="coach-bg">
+  <div class="coach-grid">
+    <div class="coach-photo">
+      <img src="https://res.cloudinary.com/ddnhp0hzd/image/upload/f_webp,q_auto,w_700/v1759370297/san-diego-boxing-gym-coach-headcoach-ernest-johnson_jpnbvg"
+           alt="Coach Ernest Johnson Head Coach Old School Boxing Fitness San Diego">
+    </div>
+    <div class="coach-content anim">
+      <div class="coach-role">Head Coach & Founder</div>
+      <div class="coach-name">Coach<br>Ernest<br>Johnson</div>
+      <p class="coach-bio">Coach Ernest Johnson brings over 50 years of boxing experience to every class. A lifelong student of the sweet science, Coach Ernest has trained fighters at every level — from youth programs to professional ranks — always emphasizing fundamentals, footwork, and the mental toughness that separates good fighters from great ones.</p>
+      <p class="coach-bio" style="margin-bottom:0">His philosophy is simple: hard work beats talent when talent doesn't work hard. Every session is built around that foundation.</p>
+      <div class="coach-stats">
+        <div><div class="cs-num">50<span>+</span></div><div class="cs-label">Yrs Experience</div></div>
+        <div><div class="cs-num">1K<span>+</span></div><div class="cs-label">Students Trained</div></div>
+        <div><div class="cs-num">5</div><div class="cs-label">Programs</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section vals-bg">
+  <div class="wrap">
+    <div style="text-align:center" class="anim">
+      <div class="sec-tag" style="justify-content:center"><i class="fas fa-heart"></i> What We Stand For</div>
+      <h2 class="sec-h2">The Old School <span>Way</span></h2>
+    </div>
+    <div class="vals-grid">
+      <div class="val-card anim">
+        <div class="val-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="val-title">Discipline</div>
+        <p class="val-body">Every champion was built in the gym before the arena. We teach consistency, focus, and the habits that create lasting transformation.</p>
+      </div>
+      <div class="val-card anim">
+        <div class="val-icon"><i class="fas fa-fist-raised"></i></div>
+        <div class="val-title">Grit</div>
+        <p class="val-body">We don't believe in easy. We believe in earning it. Every round, every rep, every drop of sweat is an investment in who you're becoming.</p>
+      </div>
+      <div class="val-card anim">
+        <div class="val-icon"><i class="fas fa-users"></i></div>
+        <div class="val-title">Community</div>
+        <p class="val-body">Inside these walls, everyone belongs. From beginners to competitors, we train together, push each other, and celebrate every win.</p>
+      </div>
+      <div class="val-card anim">
+        <div class="val-icon"><i class="fas fa-bullseye"></i></div>
+        <div class="val-title">Technique</div>
+        <p class="val-body">Old School doesn't mean outdated. It means fundamentals done right. Proper stance, footwork, and combinations are the foundation of everything.</p>
+      </div>
+      <div class="val-card anim">
+        <div class="val-icon"><i class="fas fa-child"></i></div>
+        <div class="val-title">Youth First</div>
+        <p class="val-body">Our youth program is one of the best in San Diego. We build confidence, discipline, and character in young athletes that extends far beyond the gym.</p>
+      </div>
+      <div class="val-card anim">
+        <div class="val-icon"><i class="fas fa-trophy"></i></div>
+        <div class="val-title">Excellence</div>
+        <p class="val-body">We hold our students and ourselves to the highest standard — not to be perfect, but to continuously improve and never stop growing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bg">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="anim">
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Years of Boxing</div>
+      </div>
+      <div class="anim">
+        <div class="stat-num">1,000+</div>
+        <div class="stat-label">Members Trained</div>
+      </div>
+      <div class="anim">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Training Programs</div>
+      </div>
+      <div class="anim">
+        <div class="stat-num">1</div>
+        <div class="stat-label">San Diego Gym</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JOIN CTA -->
+<section class="join-cta">
+  <div class="wrap">
+    <div class="anim">
+      <h2>Ready to <span>Train</span> with the Best?</h2>
+      <p>Your first session is on us. Come in, meet Coach Ernest, and see why Old School Boxing is San Diego's most trusted boxing gym.</p>
+      <div class="join-btns">
+        <a href="/contact/" class="btn btn-red"><i class="fas fa-bolt"></i> Claim Free Session</a>
+        <a href="tel:6192048974" class="btn btn-outline"><i class="fas fa-phone"></i> (619) 204-8974</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">OLD SCHOOL <span>BOXING</span></div>
+        <p>San Diego's most authentic boxing gym. Discipline, grit, and community built into every class.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="/services/">Adult Boxing</a>
+        <a href="/services/">Youth Boxing</a>
+        <a href="/services/">Personal Training</a>
+        <a href="/services/">Fitness Boxing</a>
+        <a href="/services/">Competition Training</a>
+      </div>
+      <div class="footer-col">
+        <h4>Gym</h4>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/contact/">Memberships</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:6192048974"><i class="fas fa-phone" style="width:14px;color:var(--red)"></i> (619) 204-8974</a>
+        <a href="mailto:oldschoolboxing619@gmail.com"><i class="fas fa-envelope" style="width:14px;color:var(--red)"></i> Email Us</a>
+        <a href="https://maps.google.com/?q=5987+El+Cajon+Blvd+San+Diego+CA+92115" target="_blank"><i class="fas fa-map-marker-alt" style="width:14px;color:var(--red)"></i> 5987 El Cajon Blvd</a>
+        <span style="color:#444"><i class="fas fa-clock" style="width:14px;color:var(--red)"></i> San Diego, CA 92115</span>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Old School Boxing & Fitness Center. All rights reserved. &nbsp;·&nbsp; San Diego, CA</div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY -->
+<div class="mob-stick">
+  <a href="tel:6192048974" class="ms-btn ms-btn-r"><i class="fas fa-phone"></i> Call Now</a>
+  <a href="/contact/" class="ms-btn"><i class="fas fa-bolt"></i> Free Session</a>
+</div>
+
+<script>
+// Nav hamburger
+document.getElementById('navHam').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+// Scroll animations
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+},{threshold:.12});
+document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
