@@ -755,62 +755,81 @@ body{padding-bottom:80px}
 @media(min-width:769px){body{padding-bottom:0}}
 
 /* ════════════════════════════════════════════
-   CHAT WIDGET
-════════════════════════════════════════════ */
-.wa-w{position:fixed;bottom:24px;right:24px;z-index:9995}
+.wa-w{position:fixed;bottom:90px;right:24px;z-index:9995}
 .wa-notif{
-  position:absolute;bottom:68px;right:0;
+  position:absolute;bottom:76px;right:0;
   background:linear-gradient(160deg,#0d0d0d,#111);
-  color:var(--white);padding:9px 14px;font-size:11px;font-weight:700;white-space:nowrap;
-  border:1px solid rgba(220,38,38,.2);border-top:2px solid var(--red);
+  color:var(--white);padding:10px 16px;font-size:12px;font-weight:700;white-space:nowrap;
+  border:1px solid rgba(220,38,38,.3);border-top:2px solid var(--red);
   opacity:0;transform:translateY(6px) scale(.94);transition:all .3s cubic-bezier(.34,1.56,.64,1);pointer-events:auto;cursor:pointer;
-  box-shadow:var(--sh-deep);
+  box-shadow:var(--sh-deep),0 0 20px rgba(220,38,38,.15);
+  border-radius:4px;
 }
 .wa-notif.show{opacity:1;transform:translateY(0) scale(1)}
-.wa-notif::before{content:'';display:inline-block;width:6px;height:6px;background:var(--red);border-radius:50%;margin-right:7px;vertical-align:middle;animation:blink 1.2s infinite;box-shadow:0 0 6px rgba(220,38,38,.6)}
+.wa-notif::before{content:'';display:inline-block;width:8px;height:8px;background:var(--red);border-radius:50%;margin-right:8px;vertical-align:middle;animation:blink 1.2s infinite;box-shadow:0 0 8px rgba(220,38,38,.8)}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+/* FAB label wrapper */
+.wa-fab-wrap{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.wa-fab-label{
+  background:var(--red);color:#fff;
+  font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:8px 16px;border-radius:4px;white-space:nowrap;
+  box-shadow:var(--sh-red);cursor:pointer;border:none;
+  animation:labelPulse 3s ease-in-out infinite;
+}
+@keyframes labelPulse{0%,100%{box-shadow:var(--sh-red)}50%{box-shadow:0 0 0 8px rgba(220,38,38,.0),var(--sh-red)}}
 .wa-fab{
-  width:54px;height:54px;
+  width:64px;height:64px;
   background:var(--red-metal);
-  color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:24px;display:flex;align-items:center;justify-content:center;
   box-shadow:var(--sh-red),var(--sh-deep),inset 0 1px 0 rgba(255,255,255,.14);
-  cursor:pointer;border:none;position:relative;overflow:hidden;
+  cursor:pointer;border:none;position:relative;overflow:hidden;border-radius:50%;
+  flex-shrink:0;
 }
-.wa-fab::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,transparent 50%);pointer-events:none}
-.wa-pulse{position:absolute;inset:-4px;border:1px solid var(--red);animation:waPulse 2s ease-in-out infinite}
-@keyframes waPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:0;transform:scale(1.5)}}
+.wa-fab::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.15) 0%,transparent 50%);pointer-events:none}
+.wa-pulse{position:absolute;inset:-6px;border:2px solid var(--red);border-radius:50%;animation:waPulse 2s ease-in-out infinite}
+@keyframes waPulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:0;transform:scale(1.6)}}
 .wa-win{
-  position:absolute;bottom:68px;right:0;width:295px;
+  position:absolute;bottom:80px;right:0;width:360px;
   background:linear-gradient(180deg,#0d0d0d,#0a0a0a);
-  border:1px solid rgba(220,38,38,.15);border-top:2px solid var(--red);
-  display:none;flex-direction:column;box-shadow:var(--sh-deep);
+  border:1px solid rgba(220,38,38,.2);border-top:3px solid var(--red);
+  display:none;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.8),0 0 30px rgba(220,38,38,.1);
+  border-radius:8px;overflow:hidden;
 }
+@media(max-width:400px){.wa-win{width:calc(100vw - 32px)}}
 .wa-win.open{display:flex}
-.wa-hd{background:linear-gradient(180deg,#0a0a0a,#080808);border-bottom:1px solid rgba(255,255,255,.05);padding:12px 14px;display:flex;justify-content:space-between;align-items:center}
-.wa-hi{display:flex;align-items:center;gap:10px}
-.wa-av{width:32px;height:32px;background:var(--red-metal);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;position:relative;flex-shrink:0;box-shadow:var(--sh-red);overflow:hidden}
+/* Urgency banner */
+.wa-banner{background:var(--red);padding:8px 14px;text-align:center;font-family:var(--head);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff}
+.wa-hd{background:linear-gradient(180deg,#0a0a0a,#080808);border-bottom:1px solid rgba(255,255,255,.06);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.wa-hi{display:flex;align-items:center;gap:12px}
+.wa-av{width:40px;height:40px;background:var(--red-metal);display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;position:relative;flex-shrink:0;box-shadow:var(--sh-red);overflow:hidden;border-radius:50%}
 .wa-av::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.1) 0%,transparent 50%);pointer-events:none}
-.wa-on{position:absolute;bottom:1px;right:1px;width:7px;height:7px;background:#22c55e;border-radius:50%;border:1.5px solid #0a0a0a;box-shadow:0 0 6px rgba(34,197,94,.5)}
-.wa-hi strong{color:var(--white);font-size:12px;font-weight:700;display:block;font-family:var(--head);letter-spacing:.3px;text-transform:uppercase;text-shadow:0 1px 4px rgba(0,0,0,.8)}
-.wa-st{font-size:9px;color:#4a4a4a}
-.wa-x{background:none;border:none;color:#4a4a4a;font-size:18px;cursor:pointer;transition:.2s}
+.wa-on{position:absolute;bottom:1px;right:1px;width:9px;height:9px;background:#22c55e;border-radius:50%;border:2px solid #0a0a0a;box-shadow:0 0 8px rgba(34,197,94,.6)}
+.wa-hi strong{color:var(--white);font-size:13px;font-weight:700;display:block;font-family:var(--head);letter-spacing:.3px;text-transform:uppercase}
+.wa-st{font-size:10px;color:#4a4a4a}
+.wa-x{background:none;border:none;color:#4a4a4a;font-size:20px;cursor:pointer;transition:.2s;padding:4px}
 .wa-x:hover{color:var(--white)}
-.wa-bd{flex:1;max-height:190px;overflow-y:auto;padding:11px;display:flex;flex-direction:column;gap:7px;background:#080808}
-.wa-msg{padding:8px 11px;font-size:11px;line-height:1.55;max-width:88%}
-.wa-bot{background:linear-gradient(160deg,#131313,#0f0f0f);border:1px solid rgba(255,255,255,.06);border-left:2px solid var(--red);color:var(--text);align-self:flex-start;box-shadow:0 2px 8px rgba(0,0,0,.5)}
+.wa-bd{flex:1;max-height:260px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;background:#080808}
+.wa-msg{padding:10px 14px;font-size:12px;line-height:1.6;max-width:90%;border-radius:6px}
+.wa-bot{background:linear-gradient(160deg,#131313,#0f0f0f);border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--red);color:var(--text);align-self:flex-start;box-shadow:0 2px 8px rgba(0,0,0,.5)}
 .wa-user{background:var(--red-metal);color:#fff;align-self:flex-end;box-shadow:var(--sh-red)}
-.wa-time{font-size:9px;color:#3a3a3a;margin-top:3px;display:block}
-.wa-qs{padding:7px 11px 4px;background:#080808;display:flex;flex-wrap:wrap;gap:5px}
-.wa-q{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);color:#4a4a4a;padding:4px 9px;font-size:9px;font-weight:700;cursor:pointer;transition:.2s;font-family:var(--head);letter-spacing:.5px;text-transform:uppercase}
-.wa-q:hover{border-color:rgba(220,38,38,.3);color:var(--red)}
-.wa-ir{display:flex;align-items:center;gap:7px;padding:8px 11px;border-top:1px solid rgba(255,255,255,.04);background:#0a0a0a}
-.wa-ir input{flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(220,38,38,.2);color:#fff;padding:7px 9px;font-size:11px;outline:none}
-.wa-ir input:focus{border-color:var(--red)}
-.wa-send{background:var(--red-metal);border:none;color:#fff;width:28px;height:28px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;transition:.2s;box-shadow:var(--sh-red)}
-.wa-fl{padding:7px 11px;border-top:1px solid rgba(255,255,255,.04);background:#090909}
-.wa-fl a{display:flex;align-items:center;justify-content:center;gap:7px;font-size:10px;font-weight:700;font-family:var(--head);letter-spacing:.5px;text-transform:uppercase;text-decoration:none;
-  background:var(--red-metal);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
+.wa-time{font-size:9px;color:#3a3a3a;margin-top:4px;display:block}
+.wa-qs{padding:10px 14px 6px;background:#080808;display:flex;flex-wrap:wrap;gap:6px}
+.wa-q{background:rgba(220,38,38,.07);border:1px solid rgba(220,38,38,.15);color:#888;padding:6px 12px;font-size:10px;font-weight:700;cursor:pointer;transition:.2s;font-family:var(--head);letter-spacing:.5px;text-transform:uppercase;border-radius:4px}
+.wa-q:hover{border-color:var(--red);color:var(--red);background:rgba(220,38,38,.12)}
+.wa-ir{display:flex;align-items:center;gap:8px;padding:10px 14px;border-top:1px solid rgba(255,255,255,.05);background:#0a0a0a}
+.wa-ir input{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-bottom:2px solid rgba(220,38,38,.3);color:#fff;padding:10px 12px;font-size:13px;outline:none;border-radius:4px;}
+.wa-ir input:focus{border-color:var(--red);background:rgba(220,38,38,.04)}
+.wa-ir input::placeholder{color:#333}
+.wa-send{background:var(--red);border:none;color:#fff;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;transition:.2s;box-shadow:var(--sh-red);border-radius:50%}
+.wa-send:hover{background:var(--red-dark);transform:scale(1.1)}
+/* Free session CTA inside chat */
+.wa-cta-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:13px;background:var(--red);color:#fff;font-family:var(--head);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:.15s;box-shadow:var(--sh-red)}
+.wa-cta-btn:hover{background:var(--red-dark)}
+.wa-fl{padding:10px 14px;border-top:1px solid rgba(255,255,255,.05);background:#090909}
+.wa-fl a{display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;font-weight:700;font-family:var(--head);letter-spacing:.5px;text-transform:uppercase;text-decoration:none;color:#444;transition:.15s}
+.wa-fl a:hover{color:var(--red)}
+
 
 /* ════════════════════════════════════════════
    MODALS
@@ -1702,32 +1721,38 @@ body{padding-bottom:80px}
 
 <!-- ░░░░░░░░░░░░░ CHAT WIDGET ░░░░░░░░░░░░░ -->
 <div class="wa-w" id="waW">
-  <div class="wa-notif" id="waN">Book your FREE trial 🥊</div>
-  <button class="wa-fab" id="waFab"><div class="wa-pulse"></div><i class="fas fa-comment-dots"></i></button>
+  <div class="wa-notif" id="waN">🥊 Your FREE class is waiting — chat now!</div>
+  <div class="wa-fab-wrap">
+    <button class="wa-fab-label" id="waLabel" onclick="document.getElementById('waWin').classList.add('open');document.getElementById('waN').classList.remove('show');this.style.display='none'">🥊 Claim Free Session</button>
+    <button class="wa-fab" id="waFab"><div class="wa-pulse"></div><i class="fas fa-comment-dots"></i></button>
+  </div>
   <div class="wa-win" id="waWin">
+    <div class="wa-banner"><i class="fas fa-bolt" style="margin-right:6px"></i>Your first class is FREE — no commitment</div>
     <div class="wa-hd">
       <div class="wa-hi">
-        <div class="wa-av"><i class="fas fa-fist-raised" style="font-size:12px"></i><div class="wa-on"></div></div>
-        <div><strong>Old School Boxing</strong><span class="wa-st">Online · Replies instantly</span></div>
+        <div class="wa-av"><i class="fas fa-fist-raised" style="font-size:14px"></i><div class="wa-on"></div></div>
+        <div><strong>Old School Boxing</strong><span class="wa-st">🟢 Online · Replies instantly</span></div>
       </div>
       <button class="wa-x" id="waX">×</button>
     </div>
     <div class="wa-bd" id="waBd">
-      <div class="wa-msg wa-bot"><p>Hey! 👊 Welcome to Old School Boxing & Fitness. How can we help you get started?</p><span class="wa-time">Now</span></div>
+      <div class="wa-msg wa-bot"><p>Hey! 👊 Welcome to Old School Boxing & Fitness in San Diego.<br><br>Your <strong>first class is FREE</strong> — no experience needed, no commitment. Just show up and train.<br><br>Type a question or tap below to get started!</p><span class="wa-time">Now</span></div>
     </div>
     <div class="wa-qs" id="waQs">
-      <button class="wa-q" data-m="How do I book a free trial?">Book a trial</button>
-      <button class="wa-q" data-m="What programs do you offer?">Programs</button>
-      <button class="wa-q" data-m="What is the membership pricing?">Pricing</button>
-      <button class="wa-q" data-m="Do you have youth boxing?">Youth boxing</button>
+      <button class="wa-q" data-m="How do I claim my free class?">🥊 Claim Free Class</button>
+      <button class="wa-q" data-m="What membership options and pricing do you have?">💳 Pricing</button>
+      <button class="wa-q" data-m="What programs do you offer?">📋 Programs</button>
+      <button class="wa-q" data-m="Do you have youth boxing?">👦 Youth Boxing</button>
     </div>
+    <button class="wa-cta-btn" onclick="openTrial();document.getElementById('waWin').classList.remove('open')"><i class="fas fa-bolt"></i> BOOK MY FREE SESSION NOW</button>
     <div class="wa-ir">
-      <input type="text" id="waIn" placeholder="Ask us anything...">
+      <input type="text" id="waIn" placeholder="Type your question here...">
       <button class="wa-send" id="waSnd"><i class="fas fa-paper-plane"></i></button>
     </div>
     <div class="wa-fl"><a href="tel:6192048974"><i class="fas fa-phone"></i> Call (619) 204-8974</a></div>
   </div>
 </div>
+
 
 <!-- ░░░░░░░░░░░░░ TRIAL MODAL ░░░░░░░░░░░░░ -->
 <div class="m-ov" id="trialModal" style="display:none">
